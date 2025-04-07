@@ -1,12 +1,17 @@
-name: Run on Pi
+name: Run DevOps Emulation
 
 on:
   push:
     branches: [main]
 
 jobs:
-  test-run:
+  emulate:
     runs-on: self-hosted
     steps:
-      - name: Say hi from Pi
-        run: echo "Hello from JasonPi! The runner is alive"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Python Emulation Script
+        run: |
+          cd scripts
+          python3 run_emulation.py
