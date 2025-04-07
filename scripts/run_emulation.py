@@ -1,7 +1,7 @@
 import time, random, requests
 from datetime import datetime
 
-log_file = "scripts/test_output.log"
+log_file = "test_output.log"
 
 def run_emulation_test():
     print("🚀 Starting emulation test...")
